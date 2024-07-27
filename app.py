@@ -186,6 +186,6 @@ def update_anomaly_frequency(selected_cow):
     anomalies = cow_data[(cow_data['difference'] > threshold_upper) | (cow_data['difference'] < threshold_lower)]
     anomaly_count = anomalies.shape[0]
     return f'Number of Anomalies for Cow {selected_cow}: {anomaly_count}'
-
+server = app.server
 if __name__ == '__main__':
-    app.run_server(debug=True, host='0.0.0.0', port=int(os.environ.get('PORT', 8050)))
+    app.run_server(debug=True)
