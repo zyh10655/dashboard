@@ -187,4 +187,4 @@ def update_anomaly_frequency(selected_cow):
     return f'Number of Anomalies for Cow {selected_cow}: {anomaly_count}'
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run_server(debug=True, host='0.0.0.0', port=int(os.environ.get('PORT', 8050)))
