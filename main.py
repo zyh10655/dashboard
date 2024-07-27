@@ -7,6 +7,7 @@ from dash import dcc, html
 from dash.dependencies import Input, Output
 import plotly.express as px
 import plotly.graph_objs as go
+import os
 warnings.filterwarnings("ignore")
 gps_data = pd.read_csv('gps_data.csv')
 imu_data = pd.read_csv('imu_data.csv')
